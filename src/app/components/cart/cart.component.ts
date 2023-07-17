@@ -25,5 +25,8 @@ ngOnInit(): void {
     this.products=data
   })
 }
+onClickDelete(indice:number){
+  this.cartService.deleteProducto(indice)
 
+}
 }

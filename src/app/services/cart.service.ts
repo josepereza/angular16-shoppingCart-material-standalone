@@ -25,4 +25,10 @@ private products$:BehaviorSubject<Product[]>=new BehaviorSubject<Product[]>([])
  console.log('carrito',this.cartProducts)
  this.products$.next(this.cartProducts)
   }
+
+  deleteProducto(indice:number){
+    this.cartProducts.splice(indice,1);
+    this.products$.next(this.cartProducts)
+
+  }
 }
